@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List+weather</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="header-logo-wrapper">
+                    <div class="header-logo">
+                        <img class="logo" src="resources/target.svg" alt="logotype">
+                    </div>
+                    <h1>Готов покорять мир?</h1>
+                </div>
+                <div class="header-weather">
+                    <h2>Погода не помешает твоим планам</h2>
+                    <div class="header-weather-wrapper">
+                        <p>Температура</p>
+                        <p>Ветер</p>
+                        <p>Давление</p>
+                        <p>Осадки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="tasks-wrapper">
+                <h2 class="tasks-title">Daily Tasks</h2>
+                <form class="task-wrapper-inner">
+                    <input type="text" placeholder="Добавь задачу на сегодня..." required>
+                    <img src="resources/Kursor-rukasvg-7-1.svg" class="task-btn" alt="Button-arrow">
+                </form>
+                <p class="task-error hidden">Введите больше символов</p>
+            </div>
+            <div class="tasks">
+                <ul class="tasks-list">
+                    <!-- <li class="task">
+                        <div class="task-text">
+                            <span class="task-number">1.</span>
+                            <span class="task-content">${NhfnfnfNhfnfnfNhf}</span>
+                        </div>
+                        <div class="task-btns">
+                            <div class="task-btn-completed"></div>
+                            <img src="resources/cross_mr3w4khsljuu.svg" class="task-btn-delete" alt="delete-task-icon">
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

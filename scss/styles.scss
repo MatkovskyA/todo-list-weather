@@ -1,0 +1,111 @@
+@import "reset";
+@import "todo";
+@import "weather";
+@import "variables";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+h1 {
+  display: inline-block;
+  text-align: center;
+}
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header-logo-wrapper {
+    display: flex;
+    align-items: center;
+    @include backgorundStyle;
+    padding: 10px;
+    .header-logo {
+      width: 100%;
+    }
+  }
+}
+
+.header-weather {
+  @include backgorundStyle;
+  max-width: 220px;
+  text-align: center;
+  padding: 10px;
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.header-weather-wrapper {
+  text-align: left;
+}
+
+.tasks-title {
+  margin-bottom: 30px;
+  font-size: 38px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid $colorBrown;
+}
+
+.tasks-wrapper {
+  @include backgorundStyle;
+  width: 90%;
+  margin: 0 auto 20px;
+  padding: 20px;
+  .task-wrapper-inner {
+    display: flex;
+    gap: 20px;
+    .task-btn {
+      cursor: pointer;
+    }
+  }
+}
+
+.tasks-list {
+  max-height: 375px;
+  overflow: auto;
+
+  .task {
+    @include backgorundStyle;
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.task-btns {
+  display: flex;
+  gap: 10px;
+  .task-btn-completed {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 131, 131);
+    border: 2px solid $colorBrown;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .task-btn-delete {
+    min-width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
