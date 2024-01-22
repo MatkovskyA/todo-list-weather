@@ -196,6 +196,17 @@ h1 {
 
 .weather-info span {
   display: block;
+  text-align: left;
+  font-size: 18;
+  font-weight: bold;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.weather-info span:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .header-weather-wrapper {
