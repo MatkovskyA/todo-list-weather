@@ -141,6 +141,10 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 16px;
+}
+
 .header-wrapper {
   display: flex;
   align-items: center;
@@ -178,14 +182,14 @@ h1 {
   width: 100%;
   padding: 5px;
   border: 1px solid brown;
-  font-size: 14px;
+  font-size: 10px;
   margin-bottom: 10px;
 }
 .header-weather .weather-location-btn {
   width: 80%;
   padding: 5px;
   border: 1px solid brown;
-  font-size: 14px;
+  font-size: 10px;
   margin-bottom: 10px;
   color: white;
   background-color: brown;
@@ -197,19 +201,21 @@ h1 {
   opacity: 0.8;
 }
 
+.weather-info {
+  background: lightblue;
+  border-radius: 10px;
+}
 .weather-info span {
+  padding-left: 10px;
   display: block;
   text-align: left;
-  font-size: 18;
+  font-size: 10px;
   font-weight: bold;
   border-bottom: 1px solid #eaeaea;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 .weather-info span:last-child {
   border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .location-error {
