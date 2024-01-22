@@ -6,3 +6,11 @@
   border: 1px solid gray;
   border-radius: 15px;
 }
+
+@mixin btnComplete {
+  border: 2px solid $colorBrown;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}

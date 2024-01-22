@@ -61,6 +61,7 @@ input[type="text"] {
   width: 100%;
   padding: 10px;
   border: 2px solid $colorBrown;
+  font-size: 18px;
 }
 
 .tasks-wrapper {
@@ -72,6 +73,7 @@ input[type="text"] {
     display: flex;
     gap: 20px;
     .task-btn {
+      display: inline-block;
       cursor: pointer;
     }
   }
@@ -94,18 +96,29 @@ input[type="text"] {
 
 .task-btns {
   display: flex;
-  gap: 10px;
-  .task-btn-completed {
-    width: 25px;
-    height: 25px;
-    background-color: rgb(255, 131, 131);
-    border: 2px solid $colorBrown;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  .task-btn-delete {
-    min-width: 25px;
-    height: 25px;
-    cursor: pointer;
-  }
+  gap: 20px;
+}
+.task-btn-completed {
+  @include btnComplete;
+  background-color: $colorRed;
+}
+.task-btn-delete {
+  min-width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-image: url(../resources/cross_mr3w4khsljuu.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.task-content {
+  font-size: 20px;
+}
+.task-btn-completed-done {
+  @include btnComplete;
+  background-color: $colorGreen;
+}
+.task-content-done {
+  text-decoration: line-through;
+  opacity: 0.6;
 }

@@ -186,6 +186,7 @@ input[type=text] {
   width: 100%;
   padding: 10px;
   border: 2px solid brown;
+  font-size: 18px;
 }
 
 .tasks-wrapper {
@@ -202,6 +203,7 @@ input[type=text] {
   gap: 20px;
 }
 .tasks-wrapper .task-wrapper-inner .task-btn {
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -224,18 +226,41 @@ input[type=text] {
 
 .task-btns {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
-.task-btns .task-btn-completed {
+
+.task-btn-completed {
+  border: 2px solid brown;
   width: 25px;
   height: 25px;
-  background-color: rgb(255, 131, 131);
-  border: 2px solid brown;
   border-radius: 50px;
   cursor: pointer;
+  background-color: rgb(255, 131, 131);
 }
-.task-btns .task-btn-delete {
+
+.task-btn-delete {
   min-width: 25px;
   height: 25px;
   cursor: pointer;
+  background-image: url(../resources/cross_mr3w4khsljuu.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.task-content {
+  font-size: 20px;
+}
+
+.task-btn-completed-done {
+  border: 2px solid brown;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: lightgreen;
+}
+
+.task-content-done {
+  text-decoration: line-through;
+  opacity: 0.6;
 }/*# sourceMappingURL=styles.css.map */
