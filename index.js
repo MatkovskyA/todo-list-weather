@@ -61,6 +61,7 @@ function doneTask(event) {
     taskTitle.classList.toggle("task-content-done");
     taskBtn.classList.toggle("task-btn-completed-done");
 
+    //удаление выполненной задачи через 2 сек - включить по необходимости
     // setTimeout(() => {
     //   liTask.remove();
     // }, 2000);

@@ -12,14 +12,19 @@
     <header>
         <div class="container">
             <div class="header-wrapper">
-                <div class="header-logo-wrapper">
-                    <div class="header-logo">
+                <div class="header-exchange-rates">
+                    <h2>Курс валют</h2>
+                    <div class="exchange-rates-inner">
+                        <span class="exchange euro">euro</span>
+                        <span class="exchange dollar">dollar</span>
+                    </div>
+                    <!-- <div class="header-logo">
                         <img class="logo" src="resources/target.svg" alt="logotype">
                     </div>
-                    <h1>Готов покорять мир?</h1>
+                    <h1>Готов покорять мир?</h1> -->
                 </div>
                 <div class="header-weather">
-                    <h2>Будь в курсе погоды</h2>
+                    <h2>Погода в городе</h2>
                     <div class="header-weather-wrapper">
                         <form action="" class="form-weather">
                             <input type="text" class="weather-location" placeholder="Введите город" required>
@@ -66,7 +71,7 @@
             </div>
         </div>
     </main>
-
+    <script src="./js-modules/exchange.js"></script>
     <script src="./js-modules/weather.js"></script>
     <script src="index.js"></script>
 </body>

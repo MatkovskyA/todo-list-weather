@@ -143,24 +143,55 @@ h1 {
 
 h2 {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .header-wrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 }
-.header-wrapper .header-logo-wrapper {
-  display: flex;
-  align-items: center;
+.header-wrapper .header-exchange-rates {
   background-color: white;
   opacity: 0.9;
   border: 1px solid gray;
   border-radius: 15px;
   padding: 10px;
 }
-.header-wrapper .header-logo-wrapper .header-logo {
-  width: 100%;
+.header-wrapper .header-exchange-rates .exchange-rates-inner span {
+  display: block;
+  padding-left: 25px;
+}
+
+.exchange {
+  position: relative;
+}
+
+.euro::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  background-image: url(../resources/Anonymous_monetary_euro_symbol.svg);
+}
+
+.dollar::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  left: 5px;
+  background-image: url(../resources/1489518658.svg);
 }
 
 .header-weather {
@@ -172,9 +203,6 @@ h2 {
   text-align: center;
   padding: 10px;
 }
-.header-weather h2 {
-  margin-bottom: 10px;
-}
 .header-weather .form-weather {
   display: flex;
 }
@@ -183,14 +211,14 @@ h2 {
   padding: 5px;
   border: 1px solid brown;
   font-size: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .header-weather .weather-location-btn {
   width: 80%;
   padding: 5px;
   border: 1px solid brown;
   font-size: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   color: white;
   background-color: brown;
 }
