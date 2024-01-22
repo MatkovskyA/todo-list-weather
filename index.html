@@ -19,10 +19,14 @@
                     <h1>Готов покорять мир?</h1>
                 </div>
                 <div class="header-weather">
-                    <h2>Погода не помешает твоим планам</h2>
+                    <h2>Будь в курсе погоды</h2>
                     <div class="header-weather-wrapper">
-                        <p>Температура</p>
-                        <p>Ветер</p>
+                        <form action="" class="form-weather">
+                            <input type="text" class="weather-location" placeholder="Введите город">
+                            <input type="submit" value="узнать" class="weather-location-btn">
+                        </form>
+                        <p class="temperature">Температура</p>
+                        <p class="wind">Ветер</p>
                         <p>Давление</p>
                         <p>Осадки</p>
                     </div>
@@ -36,8 +40,8 @@
 
             <div class="tasks-wrapper">
                 <h2 class="tasks-title">Daily Tasks</h2>
-                <form class="task-wrapper-inner">
-                    <input type="text" placeholder="Добавь задачу на сегодня..." required>
+                <form class="task-form">
+                    <input type="text" class="inputTask" placeholder="Добавь задачу на сегодня..." required>
                     <img src="resources/Kursor-rukasvg-7-1.svg" class="task-btn" alt="Button-arrow">
                 </form>
                 <p class="task-error hidden">Введите больше символов</p>

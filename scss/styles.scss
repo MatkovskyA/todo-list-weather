@@ -45,6 +45,18 @@ h1 {
   h2 {
     margin-bottom: 10px;
   }
+  .form-weather {
+    display: flex;
+    gap: 5px;
+  }
+  .weather-location {
+    width: 100%;
+    @include weatherInput;
+  }
+  .weather-location-btn {
+    width: 80%;
+    @include weatherInput;
+  }
 }
 
 .header-weather-wrapper {
@@ -57,7 +69,7 @@ h1 {
   text-align: center;
 }
 
-input[type="text"] {
+.inputTask {
   width: 100%;
   padding: 10px;
   border: 2px solid $colorBrown;
@@ -69,7 +81,7 @@ input[type="text"] {
   width: 90%;
   margin: 0 auto 20px;
   padding: 20px;
-  .task-wrapper-inner {
+  .task-form {
     display: flex;
     gap: 20px;
     .task-btn {

@@ -14,3 +14,10 @@
   border-radius: 50px;
   cursor: pointer;
 }
+
+@mixin weatherInput {
+  padding: 5px;
+  border: 1px solid $colorBrown;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

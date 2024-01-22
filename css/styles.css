@@ -171,6 +171,24 @@ h1 {
 .header-weather h2 {
   margin-bottom: 10px;
 }
+.header-weather .form-weather {
+  display: flex;
+  gap: 5px;
+}
+.header-weather .weather-location {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid brown;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.header-weather .weather-location-btn {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid brown;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
 .header-weather-wrapper {
   text-align: left;
@@ -182,7 +200,7 @@ h1 {
   text-align: center;
 }
 
-input[type=text] {
+.inputTask {
   width: 100%;
   padding: 10px;
   border: 2px solid brown;
@@ -198,11 +216,11 @@ input[type=text] {
   margin: 0 auto 20px;
   padding: 20px;
 }
-.tasks-wrapper .task-wrapper-inner {
+.tasks-wrapper .task-form {
   display: flex;
   gap: 20px;
 }
-.tasks-wrapper .task-wrapper-inner .task-btn {
+.tasks-wrapper .task-form .task-btn {
   display: inline-block;
   cursor: pointer;
 }

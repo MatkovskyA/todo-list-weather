@@ -1,5 +1,5 @@
-const form = document.querySelector("form"); // получаем форму
-const inputNode = document.querySelector("input"); // получаем инпут
+const form = document.querySelector(".task-form"); // получаем форму
+const inputNode = document.querySelector(".inputTask"); // получаем инпут
 const taskAddBtn = document.querySelector(".task-btn"); // получаем кнопку
 const tasksList = document.querySelector(".tasks-list"); //список отображения задач
 const taskError = document.querySelector(".task-error"); //текст о валидации инпута
