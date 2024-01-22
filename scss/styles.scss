@@ -47,7 +47,6 @@ h1 {
   }
   .form-weather {
     display: flex;
-    gap: 5px;
   }
   .weather-location {
     width: 100%;
@@ -56,6 +55,16 @@ h1 {
   .weather-location-btn {
     width: 80%;
     @include weatherInput;
+    color: $colorWhite;
+    background-color: $colorBrown;
+  }
+  .weather-location-btn:hover {
+    opacity: 0.8;
+  }
+}
+.weather-info {
+  span {
+    display: block;
   }
 }
 
@@ -83,10 +92,13 @@ h1 {
   padding: 20px;
   .task-form {
     display: flex;
-    gap: 20px;
     .task-btn {
       display: inline-block;
       cursor: pointer;
+      transition: all 0.8s ease 0s;
+    }
+    .task-btn:hover {
+      transform: translate(15px, 0);
     }
   }
 }
