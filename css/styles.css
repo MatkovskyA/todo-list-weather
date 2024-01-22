@@ -190,6 +190,9 @@ h1 {
   color: white;
   background-color: brown;
 }
+.header-weather .weather-location-btn:active {
+  transform: scale(1.05);
+}
 .header-weather .weather-location-btn:hover {
   opacity: 0.8;
 }
@@ -207,6 +210,15 @@ h1 {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.location-error {
+  display: none;
+}
+
+.location-error-showed {
+  display: block;
+  color: rgb(255, 131, 131);
 }
 
 .header-weather-wrapper {

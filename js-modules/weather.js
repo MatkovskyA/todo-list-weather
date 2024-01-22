@@ -15,6 +15,7 @@ const inputLocation = document.querySelector(".weather-location");
 weatherForm.onsubmit = (event) => {
   event.preventDefault();
   let city = inputLocation.value.trim();
+  const alertMessage = document.querySelector(".location-error");
   //запрос на сервер
   fetch(
     `http://api.weatherapi.com/v1/current.json?key=c40732b25e994dbd96264614242201&q=${city}`
@@ -25,10 +26,14 @@ weatherForm.onsubmit = (event) => {
     .then((data) => {
       if (data.error) {
         //если ошибка - выводим ее
-        alert(data.error.message);
+
+        alertMessage.classList.add("location-error-showed");
+
+        // alert(data.error.message);
       } else {
         //иначе выводим карточку
         // разметка для карточки
+        alertMessage.classList.remove("location-error-showed");
         const weatherCardHTML = `
       <div class="weather-info">
           <span class="city">Город: ${data.location.name}</span>

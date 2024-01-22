@@ -58,6 +58,9 @@ h1 {
     color: $colorWhite;
     background-color: $colorBrown;
   }
+  .weather-location-btn:active {
+    transform: scale(1.05);
+  }
   .weather-location-btn:hover {
     opacity: 0.8;
   }
@@ -77,6 +80,13 @@ h1 {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+}
+.location-error {
+  display: none;
+}
+.location-error-showed {
+  display: block;
+  color: $colorRed;
 }
 
 .header-weather-wrapper {
