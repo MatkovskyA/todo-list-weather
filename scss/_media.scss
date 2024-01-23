@@ -1,0 +1,68 @@
+@media (max-width: $breakpoint_mobileS) {
+  .header-wrapper {
+    gap: 10px;
+  }
+  .tasks-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .tasks-wrapper {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .inputTask {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .task-btn {
+    width: 32px;
+  }
+  .tasks-wrapper .task-form .task-btn:hover {
+    transform: translate(10px, 0);
+  }
+  .task-error {
+    font-size: 10px;
+  }
+
+  .tasks-list .task {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .task-btns {
+    gap: 10px;
+  }
+}
+
+@media (max-width: $breakpoint_mobileL) {
+  h2 {
+    font-size: 12px;
+  }
+  .tasks-title {
+    font-size: 28px;
+  }
+  .inputTask {
+    font-size: 16px;
+  }
+  .task-btn {
+    width: 34px;
+  }
+  .task-btns {
+    gap: 10px;
+  }
+  .task-btn-completed {
+    width: 20px;
+    height: 20px;
+  }
+  .task-btn-delete {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+  .task-content {
+    font-size: 14px;
+  }
+  .location-error-showed {
+    font-size: 10px;
+  }
+}

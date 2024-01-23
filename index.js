@@ -4,17 +4,10 @@ const taskAddBtn = document.querySelector(".task-btn"); // получаем кн
 const tasksList = document.querySelector(".tasks-list"); //список отображения задач
 const taskError = document.querySelector(".task-error"); //текст о валидации инпута
 
-//по нажатию на enter отображаем задачу
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  getInputValue();
-});
-// при нажатии на кнопку отображаем задачу
-taskAddBtn.addEventListener("click", getInputValue);
+function getValidation() {}
 
 function getInputValue() {
   //проверяем ввод данных в инпут
-
   const taskValue = inputNode.value.trim();
   if (taskValue === "" || taskValue.length < 3) {
     taskError.classList.remove("hidden");
@@ -22,7 +15,6 @@ function getInputValue() {
   } else {
     taskError.classList.add("hidden");
   }
-
   // делаем разметку для новой задачи
   const taskHTML = `
     <li class="task">
@@ -47,17 +39,11 @@ function deleteTask(event) {
   }
 }
 
-//слушатель для удаления задачи
-tasksList.addEventListener("click", deleteTask);
-//отмечаем выполненную задачу
-tasksList.addEventListener("click", doneTask);
-
 function doneTask(event) {
   const liTask = event.target.closest(".task");
   const taskTitle = liTask.querySelector(".task-content");
   const taskBtn = liTask.querySelector(".task-btn-completed");
   if (event.target.dataset.action === "completed") {
-    console.log(taskTitle);
     taskTitle.classList.toggle("task-content-done");
     taskBtn.classList.toggle("task-btn-completed-done");
 
@@ -73,3 +59,16 @@ function clearInputValue() {
   // оставляем фокус на ипуте
   inputNode.focus();
 }
+
+//по нажатию на enter отображаем задачу
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  getInputValue();
+});
+// при нажатии на кнопку отображаем задачу
+taskAddBtn.addEventListener("click", getInputValue);
+//слушатель для удаления задачи
+tasksList.addEventListener("click", deleteTask);
+//отмечаем выполненную задачу
+tasksList.addEventListener("click", doneTask);
+// функция валидации формы

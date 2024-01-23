@@ -277,7 +277,6 @@ h2 {
   opacity: 0.9;
   border: 1px solid gray;
   border-radius: 15px;
-  width: 90%;
   margin: 0 auto 20px;
   padding: 20px;
 }
@@ -308,6 +307,10 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.task-error {
+  color: rgb(255, 131, 131);
 }
 
 .task-btns {
@@ -349,4 +352,70 @@ h2 {
 .task-content-done {
   text-decoration: line-through;
   opacity: 0.6;
+}
+
+@media (max-width: 415px) {
+  .header-wrapper {
+    gap: 10px;
+  }
+  .tasks-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .tasks-wrapper {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .inputTask {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .task-btn {
+    width: 32px;
+  }
+  .tasks-wrapper .task-form .task-btn:hover {
+    transform: translate(10px, 0);
+  }
+  .task-error {
+    font-size: 10px;
+  }
+  .tasks-list .task {
+    width: 100%;
+    padding: 10px;
+  }
+  .task-btns {
+    gap: 10px;
+  }
+}
+@media (max-width: 676px) {
+  h2 {
+    font-size: 12px;
+  }
+  .tasks-title {
+    font-size: 28px;
+  }
+  .inputTask {
+    font-size: 16px;
+  }
+  .task-btn {
+    width: 34px;
+  }
+  .task-btns {
+    gap: 10px;
+  }
+  .task-btn-completed {
+    width: 20px;
+    height: 20px;
+  }
+  .task-btn-delete {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+  .task-content {
+    font-size: 14px;
+  }
+  .location-error-showed {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */
