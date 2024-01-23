@@ -29,6 +29,7 @@ function getInputValue() {
     `;
   tasksList.insertAdjacentHTML("beforeend", taskHTML);
   clearInputValue();
+  saveData();
 }
 
 // удаление задачи
@@ -36,6 +37,7 @@ function deleteTask(event) {
   if (event.target.dataset.action === "deleted") {
     const parentNode = event.target.closest("li");
     parentNode.remove();
+    saveData();
   }
 }
 
@@ -46,7 +48,7 @@ function doneTask(event) {
   if (event.target.dataset.action === "completed") {
     taskTitle.classList.toggle("task-content-done");
     taskBtn.classList.toggle("task-btn-completed-done");
-
+    saveData();
     //удаление выполненной задачи через 2 сек - включить по необходимости
     // setTimeout(() => {
     //   liTask.remove();
@@ -72,3 +74,14 @@ tasksList.addEventListener("click", deleteTask);
 //отмечаем выполненную задачу
 tasksList.addEventListener("click", doneTask);
 // функция валидации формы
+
+// сохраняем в LocalStorage наши задачи
+function saveData() {
+  localStorage.setItem("data", tasksList.innerHTML);
+}
+// отображаем в LocalStorage задачи
+function showTasks() {
+  tasksList.innerHTML = localStorage.getItem("data");
+}
+
+showTasks();
