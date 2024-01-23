@@ -46,11 +46,15 @@ h2 {
 .euro::before {
   @include exchangeBefore;
   background-image: url(../resources/Anonymous_monetary_euro_symbol.svg);
+  animation: animate linear 3.5s infinite;
+  width: 20px;
 }
 .dollar::before {
   @include exchangeBefore;
   left: 5px;
   background-image: url(../resources/1489518658.svg);
+  animation: animate linear 4s infinite;
+  width: 10px;
 }
 
 .header-weather {
@@ -184,4 +188,38 @@ h2 {
   opacity: 0.6;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  .container {
+    padding: 5px;
+  }
+  a {
+    color: $colorWhite;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  span {
+    color: $colorWhite;
+  }
+}
+
 @import "media";
+
+@keyframes animate {
+  0% {
+    transform: perspective(23rem) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(23rem) rotateY(90deg);
+  }
+  50% {
+    transform: perspective(23rem) rotateY(180deg);
+  }
+  75% {
+    transform: perspective(23rem) rotateY(270deg);
+  }
+  100% {
+    transform: perspective(23rem) rotateY(360deg);
+  }
+}

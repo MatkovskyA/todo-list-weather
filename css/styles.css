@@ -173,11 +173,12 @@ h2 {
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
-  width: 20px;
   height: 20px;
   left: 0;
   top: 0;
   background-image: url(../resources/Anonymous_monetary_euro_symbol.svg);
+  animation: animate linear 3.5s infinite;
+  width: 20px;
 }
 
 .dollar::before {
@@ -186,12 +187,13 @@ h2 {
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
-  width: 20px;
   height: 20px;
   left: 0;
   top: 0;
   left: 5px;
   background-image: url(../resources/1489518658.svg);
+  animation: animate linear 4s infinite;
+  width: 10px;
 }
 
 .header-weather {
@@ -354,6 +356,22 @@ h2 {
   opacity: 0.6;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+}
+footer .container {
+  padding: 5px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer span {
+  color: white;
+}
+
 @media (max-width: 415px) {
   .header-wrapper {
     gap: 10px;
@@ -417,5 +435,22 @@ h2 {
   }
   .location-error-showed {
     font-size: 10px;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: perspective(23rem) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(23rem) rotateY(90deg);
+  }
+  50% {
+    transform: perspective(23rem) rotateY(180deg);
+  }
+  75% {
+    transform: perspective(23rem) rotateY(270deg);
+  }
+  100% {
+    transform: perspective(23rem) rotateY(360deg);
   }
 }/*# sourceMappingURL=styles.css.map */
